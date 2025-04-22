@@ -1,6 +1,7 @@
 module NetworkSolvers
 
 include("solvers/eigsolve.jl")
+include("solvers/linsolve.jl")
 include("solvers/exponentiate.jl")
 include("solvers/runge_kutta.jl")
 
@@ -10,6 +11,7 @@ include("permute_indices.jl")
 include("eigsolve.jl")
 include("tdvp.jl")
 include("fitting.jl")
+include("linsolve.jl")
 
 include("iterators.jl")
 include("adapters.jl")

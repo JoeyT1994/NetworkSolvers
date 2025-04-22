@@ -20,7 +20,7 @@ function extracter!(problem::FittingProblem, region; kws...)
   prev_region = gauge_region(problem)
   tn = state(problem)
   o_tn = itn.update_factors(
-    overlapnetwork(problem), Dict(zip(region, [tn[v] for v in prev_region]))
+    overlapnetwork(problem), Dict(zip(prev_region, [tn[v] for v in prev_region]))
   )
   path = itn.edge_sequence_between_regions(tn, prev_region, region)
   tn = itn.gauge_walk(itn.Algorithm("orthogonalize"), tn, path)
